@@ -348,20 +348,11 @@ nav {
   gap: 0.5rem;
 }
 
-.logro-card-place {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted2);
-}
-
-.logro-card-year {
-  font-family: var(--mono);
-  font-size: 9px;
-  letter-spacing: 0.06em;
-  color: var(--muted2);
-  white-space: nowrap;
+.logro-card-info {
+  font-family: var(--body);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
 }
 
 .logro-card-title {

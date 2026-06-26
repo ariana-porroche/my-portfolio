@@ -79,11 +79,8 @@ function SobreMiPage() {
                 <div className="logros-grid">
                     {logros.map((logro) => (
                         <div className="logro-card" key={logro.title}>
-                            <div className="logro-card-meta">
-                                <span className="logro-card-place">{logro.place}</span>
-                                <span className="logro-card-year">{logro.year}</span>
-                            </div>
                             <div className="logro-card-title">{logro.title}</div>
+                            <div className="logro-card-info">{logro.place} · {logro.year}</div>
                             <p className="logro-card-desc">{logro.description}</p>
                             <div className="logro-card-skills">
                                 {logro.skills.map((skill) => (
