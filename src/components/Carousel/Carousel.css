@@ -1,33 +1,36 @@
 .carousel-container {
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     background: transparent;
-    padding: 2rem 0;
-    perspective: 1200px;
+    padding: 2.5rem 0;
+    position: relative;
 }
 
 .carousel-stage {
     width: 100%;
-    transform-style: preserve-3d;
+    height: 229px;
+    overflow: hidden;
+    clip-path: url(#carousel-lens-clip);
 }
 
 .carousel-track {
     display: flex;
+    align-items: center;
+    height: 100%;
     gap: 16px;
     width: max-content;
     animation: carousel-loop 30s linear infinite;
-    transform-style: preserve-3d;
 }
 
 .carousel-item {
+    position: relative;
     width: 320px;
-    aspect-ratio: 7/5;
-    height: auto;
+    height: 229px;
+    /* 7/5 ratio */
     flex-shrink: 0;
-    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
+    border-radius: 6px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
     transform: rotateY(-5deg) scale(0.96);
     transition: transform 0.3s ease;
 }
