@@ -13,20 +13,19 @@ function LandingPage() {
     <>
       <section className="hero">
         <div>
-          <div className="hero-eyebrow">Ingeniera informática</div>
           <h1 className="hero-name">
-            ARIANA
-            <br />
-            <em>PORROCHE</em>
+            ARIANA PORROCHE
           </h1>
-          <p className="hero-desc">
-            Ingeniera de Software especializada en el desarrollo de aplicaciones
-            multiplataforma con experiencias de usuario impecables, y backends robustos y
-            mantenibles
+          <p className="hero-meta">
+            <span className="item">Ingeniera informática</span>
+            <span className="item">Desarrollo software</span>
+            <span className="item">Zaragoza, España</span>
           </p>
-          <Link to="/proyectos" className="hero-cta">
-            Ver proyectos <span className="arrow">→</span>
-          </Link>
+          <p className="hero-desc">
+            <span className="desc-line line-1">[Diseño y desarrollo soluciones de software</span>
+            <span className="desc-line line-2">robustas, combinando experiencias de usuario impecables y</span>
+            <span className="desc-line line-3">código mantenible]</span>
+          </p>
         </div>
       </section>
 
