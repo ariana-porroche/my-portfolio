@@ -1,10 +1,13 @@
-import { NavLink } from 'react-router-dom';
+// src/components/NavBar/NavBar.tsx
 
-function Navbar() {
+import { NavLink } from 'react-router-dom';
+import './NavBar.css';
+
+function NavBar() {
     return (
         <nav>
             <NavLink to="/" className="nav-logo">
-                APorroche
+                Ariana Porroche
             </NavLink>
             <ul className="nav-links">
                 <li>
@@ -36,4 +39,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default NavBar;

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar/NavBar';
 import ProjectCard from './components/ProjectCard';
 import { projects } from './data/projects';
 import { skillColumns } from './data/skills';
@@ -95,7 +95,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="portfolio">
-        <Navbar />
+        <NavBar />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/proyectos" element={<ProyectosPage />} />
