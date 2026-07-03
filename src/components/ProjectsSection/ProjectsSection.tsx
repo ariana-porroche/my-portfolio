@@ -8,7 +8,6 @@ function ProjectsSection() {
         <section>
             <div className="section-header">
                 <span className="section-title">Proyectos destacados</span>
-                <span className="section-count">{projects.length} trabajos</span>
             </div>
             <div className="projects-grid">
                 {projects.slice(0, 2).map((project) => (
@@ -19,10 +18,8 @@ function ProjectsSection() {
                         title={project.title}
                         description={project.description}
                         techStack={project.techStack}
-                        webImage={project.webImage}
-                        webAlt={project.webAlt}
-                        mobileImage={project.mobileImage}
-                        mobileAlt={project.mobileAlt}
+                        image={project.image}
+                        alt={project.alt}
                     />
                 ))}
             </div>

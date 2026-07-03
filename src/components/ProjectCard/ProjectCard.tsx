@@ -1,5 +1,3 @@
-import MonitorMockup from '../MonitorMockup';
-import PhoneMockup from '../PhoneMockup';
 import "./ProjectCard.css";
 
 type ProjectCardProps = {
@@ -8,10 +6,8 @@ type ProjectCardProps = {
     title: string;
     description: string;
     techStack: string[];
-    webImage: string;
-    webAlt: string;
-    mobileImage?: string;
-    mobileAlt?: string;
+    image: string;
+    alt: string;
 };
 
 function ProjectCard({
@@ -20,18 +16,13 @@ function ProjectCard({
     title,
     description,
     techStack,
-    webImage,
-    webAlt,
-    mobileImage,
-    mobileAlt,
+    image,
+    alt,
 }: ProjectCardProps) {
-    const isWebOnly = !mobileImage;
-
     return (
         <div className="project-card">
-            <div className={`mockup-area ${isWebOnly ? 'web-only' : ''}`}>
-                <MonitorMockup src={webImage} alt={webAlt} />
-                {mobileImage && <PhoneMockup src={mobileImage} alt={mobileAlt ?? webAlt} />}
+            <div className={`mockup-area`}>
+                <img src={image} alt={alt} className="project-image" />
             </div>
             <div className="project-body">
                 <div className="project-top">
