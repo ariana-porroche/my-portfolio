@@ -3,14 +3,20 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { projects } from '../../data/projects';
 import './ProjectsSection.css';
 
-function ProjectsSection() {
+type ProjectsSectionProps = {
+    preview?: boolean;
+};
+
+function ProjectsSection({ preview = false }: ProjectsSectionProps) {
+    const visibleProjects = preview ? projects.slice(0, 2) : projects;
+
     return (
         <section>
             <div className="section-header">
                 <span className="section-title">Proyectos destacados</span>
             </div>
             <div className="projects-grid">
-                {projects.map((project) => (
+                {visibleProjects.map((project) => (
                     <ProjectCard
                         key={project.title}
                         type={project.type}
@@ -23,11 +29,13 @@ function ProjectsSection() {
                     />
                 ))}
             </div>
-            <div style={{ padding: '1.5rem 3rem 0' }}>
-                <Link to="/proyectos" className="btn-primary">
-                    Ver todos los proyectos <span className="arrow">→</span>
-                </Link>
-            </div>
+            {preview && (
+                <div style={{ padding: '1.5rem 3rem 0' }}>
+                    <Link to="/proyectos" className="btn-primary">
+                        Ver todos los proyectos <span className="arrow">→</span>
+                    </Link>
+                </div>
+            )}
         </section>
     );
 }

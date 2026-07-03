@@ -37,7 +37,7 @@ function LandingPage() {
                 <Carousel images={misProyectos} />
             </section>
 
-            <ProjectsSection />
+            <ProjectsSection preview />
 
             <TechStackSection
                 style={{ marginTop: '3rem' }}
