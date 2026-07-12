@@ -41,3 +41,63 @@
     color: var(--text-color);
     margin-top: 1rem;
 }
+
+/* Estilos para el contenido markdown dentro de .project-text */
+.project-text p {
+    margin: 0 0 0.6rem 0;
+}
+
+.project-text p:last-child {
+    margin-bottom: 0;
+}
+
+.project-text ul,
+.project-text ol {
+    margin: 0.4rem 0 0.6rem 1.4rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.project-text li {
+    list-style: disc;
+}
+
+.project-text strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.mockup-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.mockup-frame {
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: transparent;
+}
+
+.mockup-frame--portrait {
+    height: 360px;
+    aspect-ratio: 1 / 1.414;
+    /* Proporción A4 vertical */
+}
+
+.mockup-frame--landscape {
+    height: 240px;
+    aspect-ratio: 1.8 / 1;
+}
+
+.mockup-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}

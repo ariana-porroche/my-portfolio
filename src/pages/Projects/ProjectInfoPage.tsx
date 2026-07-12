@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import SectionHeader from "../../components/SectionHeader";
+import ReactMarkdown from "react-markdown";
 import { projects } from "../../data/projects";
 import "./ProjectInfoPage.css";
 
@@ -25,7 +25,13 @@ function ProjectInfoPage() {
     return (
         <section className="project-info">
             <h2 className="project-name">{project.title}</h2>
-            <p className="project-text">{project.description}</p>
+
+            {project.description && (
+                <div className="project-text">
+                    <ReactMarkdown>{project.description}</ReactMarkdown>
+                </div>
+            )}
+
             <h3 className="project-section-title">Stack tecnológico</h3>
             <div className="tech-stack">
                 {project.techStack.map((tech) => (
@@ -34,18 +40,66 @@ function ProjectInfoPage() {
                     </span>
                 ))}
             </div>
-            <h3 className="project-section-title">Descripción</h3>
-            <p className="project-text">{project.detailedDescription}</p>
+
+            {project.detailedDescription && (
+                <>
+                    <h3 className="project-section-title">Descripción</h3>
+                    <div className="project-text">
+                        <ReactMarkdown>{project.detailedDescription}</ReactMarkdown>
+                    </div>
+                </>
+            )}
+
+            {project.mobileMockups && project.mobileMockups.length > 0 && (
+                <>
+                    <h3 className="project-section-title">Aplicación móvil</h3>
+                    <div className="mockup-gallery mockup-gallery--mobile">
+                        {project.mobileMockups.map((src, i) => (
+                            <div key={i} className="mockup-frame mockup-frame--portrait">
+                                <img src={src} alt={`${project.title} móvil ${i + 1}`} className="mockup-img" />
+                            </div>
+                        ))}
+                    </div>
+                </>
+            )}
+
+            {project.webMockups && project.webMockups.length > 0 && (
+                <>
+                    <h3 className="project-section-title">Aplicación web</h3>
+                    <div className="mockup-gallery mockup-gallery--web">
+                        {project.webMockups.map((src, i) => (
+                            <div key={i} className="mockup-frame mockup-frame--landscape">
+                                <img src={src} alt={`${project.title} web ${i + 1}`} className="mockup-img" />
+                            </div>
+                        ))}
+                    </div>
+                </>
+            )}
+
             {project.architecture && (
                 <>
                     <h3 className="project-section-title">Arquitectura</h3>
-                    <p className="project-text">{project.architecture}</p>
+                    <div className="project-text">
+                        <ReactMarkdown>{project.architecture}</ReactMarkdown>
+                    </div>
                 </>
             )}
+
             {project.domainModel && (
                 <>
                     <h3 className="project-section-title">Modelo de dominio</h3>
-                    <p className="project-text">{project.domainModel}</p>
+                    <div className="project-text">
+                        <ReactMarkdown>{project.domainModel}</ReactMarkdown>
+                    </div>
+                </>
+            )}
+
+            {project.scrum && (
+                <>
+                    <h3 className="project-section-title">Scrum</h3>
+                    <div className="project-text">
+                        <ReactMarkdown>{project.scrum}</ReactMarkdown>
+                    </div>
                 </>
             )}
         </section>
