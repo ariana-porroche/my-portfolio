@@ -1,20 +1,14 @@
+import { Link } from "react-router-dom";
 import "./ProjectCard.css";
+import type { Project } from "../../data/projects";
 
-type ProjectCardProps = {
-    type: string;
-    year: string;
-    title: string;
-    description: string;
-    techStack: string[];
-    image: string;
-    alt: string;
-};
+type ProjectCardProps = Project;
 
 function ProjectCard({
     type,
     year,
     title,
-    description,
+    summary,
     techStack,
     image,
     alt,
@@ -32,7 +26,7 @@ function ProjectCard({
                     <span className="project-year">{year}</span>
                 </div>
                 <h3 className="project-title">{title}</h3>
-                <p className="project-desc">{description}</p>
+                <p className="project-summary">{summary}</p>
                 <div className="project-footer">
                     <div className="tech-stack">
                         {techStack.map((tech) => (
@@ -41,9 +35,9 @@ function ProjectCard({
                             </span>
                         ))}
                     </div>
-                    <button className="btn-primary">
+                    <Link to={`/proyectos/${title.replace(/\s+/g, "-").toLowerCase()}`} className="btn-primary">
                         Ver más <span className="arrow">→</span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

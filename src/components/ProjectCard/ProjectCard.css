@@ -61,7 +61,7 @@
     margin-bottom: 0.75rem;
 }
 
-.project-desc {
+.project-summary {
     font-family: var(--text);
     font-size: 16px;
     color: var(--text-secondary-color);
