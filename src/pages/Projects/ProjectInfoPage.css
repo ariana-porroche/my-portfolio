@@ -69,6 +69,12 @@
     color: var(--text-color);
 }
 
+.project-architecture-image {
+    max-height: 200px;
+    display: flex;
+    margin: 0 auto;
+}
+
 .mockup-gallery {
     display: flex;
     flex-direction: row;

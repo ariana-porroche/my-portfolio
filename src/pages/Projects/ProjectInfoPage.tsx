@@ -79,9 +79,14 @@ function ProjectInfoPage() {
             {project.architecture && (
                 <>
                     <h3 className="project-section-title">Arquitectura</h3>
-                    <div className="project-text">
-                        <ReactMarkdown>{project.architecture}</ReactMarkdown>
-                    </div>
+                    {project.architecture.map((arc, index) => (
+                        <div key={index} className="project-text">
+                            <ReactMarkdown>{arc}</ReactMarkdown>
+                            {project.architectureImages && project.architectureImages[index] && (
+                                <img src={project.architectureImages[index]} alt={`${project.title} arquitectura ${index + 1}`} className="project-architecture-image" />
+                            )}
+                        </div>
+                    ))}
                 </>
             )}
 
