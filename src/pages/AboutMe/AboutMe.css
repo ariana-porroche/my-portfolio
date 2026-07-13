@@ -1,10 +1,23 @@
 .about-me {
-    padding: 2rem 3rem;
+    margin: 2rem 0 3rem 3rem;
+    padding-bottom: 2rem;
     border-bottom: 0.5px solid var(--rule);
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: end;
     gap: 3rem;
+}
+
+@media (max-width: 900px) {
+    .about-me {
+        margin: 2rem 0 2.5rem 2.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-me {
+        margin: 2rem 0 2rem 2rem;
+    }
 }
 
 .about-me-name {
@@ -23,6 +36,7 @@
     line-height: 1;
     color: var(--text);
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .about-me-desc em {
@@ -137,6 +151,15 @@
     .edu-grid {
         grid-template-columns: 1fr;
         margin: 0 2.5rem 2.5rem;
+    }
+
+    .edu-card {
+        border-right: none;
+        border-bottom: 0.5px solid var(--table-border);
+    }
+
+    .edu-card:last-child {
+        border-bottom: none;
     }
 }
 
