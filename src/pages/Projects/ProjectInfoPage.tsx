@@ -95,6 +95,9 @@ function ProjectInfoPage() {
                     <h3 className="project-section-title">Modelo de dominio</h3>
                     <div className="project-text">
                         <ReactMarkdown>{project.domainModel}</ReactMarkdown>
+                        {project.domainModelImage && (
+                            <img src={project.domainModelImage} alt={`${project.title} domain model`} className="project-architecture-image" />
+                        )}
                     </div>
                 </>
             )}

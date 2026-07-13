@@ -12,6 +12,7 @@ export type Project = {
     architecture?: string[];
     architectureImages?: string[];
     domainModel?: string;
+    domainModelImage?: string;
     scrum?: string;
     mobileMockups?: string[];
     webMockups?: string[];
@@ -35,6 +36,7 @@ export const projects: Project[] = [
         ],
         architectureImages: ['/a-darts/architecture/1.png', '/a-darts/architecture/2.png'],
         domainModel: 'El diseño de la arquitectura software combina dos patrones de diseño complementarios: **Arquitectura Hexagonal** (o Ports and Adapters) y **Diseño Dirigido por el Dominio** (DDD).\n\nBajo este enfoque, se establece una separación estricta entre el núcleo de negocio y el resto del sistema, de forma que cada capa tiene una responsabilidad bien definida y no depende de los detalles de implementación de las demás. En total, el sistema se divide en tres capas independientes: la capa de dominio, que contiene toda la lógica de negocio; la capa de aplicación, que actúa como orquestadora de los casos de uso; y la capa de infraestructura, que implementa los adaptadores concretos que se comunican con el mundo exterior.\n\nSobre esta base arquitectónica, se aplican los principios del DDD para modelar el dominio. El sistema se organiza en torno a agregados, cada uno con su raíz, sus entidades y sus objetos valor. El modelo de dominio de la aplicación web se compone de los siguientes ocho agregados: User, Player, Tournament, RegisteredParticipant, Bracket, Match, PlayingArea y TournamentResults.',
+        domainModelImage: '/a-darts/domain-model/1.png',
         mobileMockups: ['/a-darts/mobile-mockups/1.png', '/a-darts/mobile-mockups/2.png', '/a-darts/mobile-mockups/3.png', '/a-darts/mobile-mockups/4.png', '/a-darts/mobile-mockups/5.png', '/a-darts/mobile-mockups/6.png'],
         webMockups: ['/a-darts/web-mockups/1.png', '/a-darts/web-mockups/2.png', '/a-darts/web-mockups/3.png', '/a-darts/web-mockups/4.png', '/a-darts/web-mockups/5.png', '/a-darts/web-mockups/6.png', '/a-darts/web-mockups/7.png', '/a-darts/web-mockups/8.png', '/a-darts/web-mockups/9.png'],
     },
@@ -56,6 +58,7 @@ export const projects: Project[] = [
         ],
         architectureImages: ['/geoada/architecture/1.png', '/geoada/architecture/2.png'],
         domainModel: 'El dominio se modela mediante **Diseño Dirigido por el Dominio**, con **5 agregados** (Persona, Departamento, Edificio, Espacio y Reserva), cada uno con su propia entidad raíz, invariantes y lógica encapsulada. Se complementa con 12 objetos de valor (como Correo, Rol, Horario o Validez) que expresan restricciones del dominio sin identidad propia, y 11 políticas de negocio que regulan operaciones sensibles, como qué roles pueden modificar un espacio, qué transiciones de rol están permitidas o qué condiciones debe cumplir una reserva para considerarse válida.',
+        domainModelImage: '/geoada/domain-model/1.png',
         webMockups: ['/geoada/web-mockups/1.png', '/geoada/web-mockups/2.png', '/geoada/web-mockups/3.png', '/geoada/web-mockups/4.png', '/geoada/web-mockups/5.png'],
     },
     {
