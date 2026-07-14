@@ -119,7 +119,7 @@ function ContactoPage() {
                                         className={`contact-input${errors.email ? ' contact-input--error' : ''}`}
                                         type="email"
                                         name="email"
-                                        placeholder="tu@correo.com"
+                                        placeholder="tucorreo@dominio.com"
                                         autoComplete="email"
                                     />
                                     {errors.email && (
@@ -159,7 +159,7 @@ function ContactoPage() {
                                     className="contact-input"
                                     type="text"
                                     name="empresa"
-                                    placeholder="Nombre de la empresa o proyecto"
+                                    placeholder="Nombre de la empresa u organización"
                                     autoComplete="organization"
                                 />
                             </div>
