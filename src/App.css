@@ -73,6 +73,18 @@
   padding: 1rem 3rem 2.5rem;
 }
 
+@media (max-width: 900px) {
+  .section-header {
+    padding: 1rem 2.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-header {
+    padding: 1rem 2rem 2.5rem;
+  }
+}
+
 .section-title {
   font-family: var(--text);
   font-size: 48px;

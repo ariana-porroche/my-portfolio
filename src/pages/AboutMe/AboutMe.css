@@ -181,7 +181,7 @@
 
 .logros-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     margin: 0 3rem 3rem;
     border: 0.5px solid var(--table-border);
@@ -251,7 +251,7 @@
     padding: 2px 7px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .logros-grid {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 2.5rem 2.5rem;
@@ -280,7 +280,7 @@
 
     .logro-card {
         border-right: none;
-        border-bottom: 0.5px solid var(--rule);
+        border-bottom: 0.5px solid var(--table-border);
     }
 
     .logro-card:last-child {
