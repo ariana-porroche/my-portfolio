@@ -26,9 +26,9 @@ function LandingPage() {
                         <span className="item">Zaragoza, España</span>
                     </p>
                     <p className="hero-desc">
-                        <span className="desc-line line-1">[Diseño y desarrollo soluciones software</span>
-                        <span className="desc-line line-2">robustas, combinando experiencias de usuario impecables y</span>
-                        <span className="desc-line line-3">código mantenible]</span>
+                        <span className="desc-line line-1">[Diseño y desarrollo soluciones software robustas</span>
+                        <span className="desc-line line-2">que resuelven problemas reales, combinando experiencias de usuario</span>
+                        <span className="desc-line line-3">impecables y código mantenible]</span>
                     </p>
                 </div>
             </section>
